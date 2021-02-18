@@ -4,19 +4,21 @@ class UserGreeting extends Component {
 
     constructor(props) {
         super(props)
-    
+
         this.state = {
-             isLoggedIn: false
+            isLoggedIn: true
         }
     }
-    
+
     render() {
 
-        return (
-            this.state.isLoggedIn ?
-            <div>Welcome Danail</div> :
-            <div>Welcome Guest</div>
-        )        
+        return this.state.isLoggedIn && <div>Welcome Danail</div>
+
+        // return (
+        //     this.state.isLoggedIn ?
+        //         <div>Welcome Danail</div> :
+        //         <div>Welcome Guest</div>
+        // )
 
         // let message
 
@@ -42,7 +44,7 @@ class UserGreeting extends Component {
 
         // return (
         //     <div>
-                
+
         //     </div>
         // )
     }
