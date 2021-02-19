@@ -7,7 +7,7 @@ const heading = {
 
 function Inline() {
     return (
-        <div>
+        <div>                        
             <h1 style={heading}>Inlice CSS</h1>
         </div>
     )
