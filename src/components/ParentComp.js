@@ -1,5 +1,5 @@
 import React, { Component, PureComponent } from 'react'
-import MemoComp from './MemoComp';
+import MemoComp from './memoComponent/MemoComp';
 import PureComp from './PureComp';
 import RegComp from './RegComp';
 

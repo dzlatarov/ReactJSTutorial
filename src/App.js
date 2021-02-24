@@ -8,7 +8,7 @@ import Message from './components/Message'
 import Counter from './components/Counter'
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
-import EventBind from './components/EventBind';
+import EventBind from './components/eventHandlers/EventBind';
 import ParentComponent from './components/ParentComponent';
 import UserGreeting from './components/UserGreeting';
 import NameList from './components/NameList';
@@ -16,13 +16,13 @@ import Stylesheet from './components/Stylesheet';
 import Inline from './components/Inline';
 import './appStyles.css'
 import styles from './appStyles.module.css'
-import Form from './components/Form';
-import LifecycleA from './components/LifecycleA';
-import Table from './components/Table';
+import Form from './components/formHandling/Form';
+import LifecycleA from './components/lifecycleMethods/LifecycleA';
+import Table from './components/fragments/Table';
 import ParentComp from './components/ParentComp';
-import RefsDemo from './components/RefsDemo';
-import FocusInput from './components/FocusInput';
-import FRParentInput from './components/Forwarding Refs/FRParentInput';
+import RefsDemo from './components/refs/RefsDemo';
+import FocusInput from './components/refs/FocusInput';
+import FRParentInput from './components/forwarding Refs/FRParentInput';
 
 class App extends Component {
   render() {

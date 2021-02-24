@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FRInput from '../Forwarding Refs/FRInput'
+import FRInput from './FRInput'
 
 class FRParentInput extends Component {
     constructor(props) {
