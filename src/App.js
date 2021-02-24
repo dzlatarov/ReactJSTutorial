@@ -26,22 +26,15 @@ import FRParentInput from './components/forwarding Refs/FRParentInput';
 import PortalDemo from './components/portals/PortalDemo';
 import Hero from './components/errorBoundary/Hero';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
+import ClickCounter from './components/higherOrderComponents/ClickCounter';
+import HoverCounter from './components/higherOrderComponents/HoverCounter';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ErrorBoundary>
-          <Hero heroName='Batman' />
-        </ErrorBoundary>
-
-        <ErrorBoundary>
-          <Hero heroName='Superman' />
-        </ErrorBoundary>
-        
-        <ErrorBoundary>
-          <Hero heroName='Joker' />
-        </ErrorBoundary>
+        <ClickCounter name='Danail'/>
+        <HoverCounter name='Danail'/>
       </div>
     );
   }
