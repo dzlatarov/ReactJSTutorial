@@ -23,12 +23,13 @@ import ParentComp from './components/ParentComp';
 import RefsDemo from './components/refs/RefsDemo';
 import FocusInput from './components/refs/FocusInput';
 import FRParentInput from './components/forwarding Refs/FRParentInput';
+import PortalDemo from './components/portals/PortalDemo';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <FRParentInput />
+        <PortalDemo />
       </div>
     );
   }
