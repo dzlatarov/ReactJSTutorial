@@ -32,13 +32,14 @@ import Counter from './components/renderProps/Counter';
 import ComponentC from './components/context/ComponentC';
 import { UserProvider } from './components/context/UserContext';
 import PostList from './http-react/PostList';
+import PostForm from './http-react/PostForm';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostList />
+        <PostForm />
       </div>
     );
   }
