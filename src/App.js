@@ -31,16 +31,14 @@ import HoverCounter from './components/renderProps/HoverCounter';
 import Counter from './components/renderProps/Counter';
 import ComponentC from './components/context/ComponentC';
 import { UserProvider } from './components/context/UserContext';
+import PostList from './http-react/PostList';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserProvider value='Danail'>
-          <ComponentC />
-        </UserProvider>
-
+        <PostList />
       </div>
     );
   }
