@@ -30,13 +30,17 @@ import ClickCounter from './components/renderProps/ClickCounter';
 import HoverCounter from './components/renderProps/HoverCounter';
 import Counter from './components/renderProps/Counter';
 import ComponentC from './components/context/ComponentC';
+import { UserProvider } from './components/context/UserContext';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ComponentC />
+        <UserProvider value='Danail'>
+          <ComponentC />
+        </UserProvider>
+
       </div>
     );
   }
