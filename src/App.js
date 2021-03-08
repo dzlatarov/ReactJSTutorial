@@ -5,7 +5,6 @@ import Greet from './components/Greet'
 import Welcome from './components/Welcome'
 import Hello from './components/Hello'
 import Message from './components/Message'
-import Counter from './components/Counter'
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/eventHandlers/EventBind';
@@ -26,15 +25,23 @@ import FRParentInput from './components/forwarding Refs/FRParentInput';
 import PortalDemo from './components/portals/PortalDemo';
 import Hero from './components/errorBoundary/Hero';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
-import ClickCounter from './components/higherOrderComponents/ClickCounter';
-import HoverCounter from './components/higherOrderComponents/HoverCounter';
+import User from './components/renderProps/User';
+import ClickCounter from './components/renderProps/ClickCounter';
+import HoverCounter from './components/renderProps/HoverCounter';
+import Counter from './components/renderProps/Counter';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ClickCounter name='Danail'/>
-        <HoverCounter name='Danail'/>
+        <Counter render={(count, incrementCount) => (
+          <ClickCounter count={count} incrementCount={incrementCount} />
+        )} />
+        <Counter render={(count, incrementCount) => (
+          <HoverCounter count={count} incrementCount={incrementCount} />
+        )} />
+        <User render={() => 'Danail'} />
       </div>
     );
   }
