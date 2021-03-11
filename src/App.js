@@ -38,13 +38,14 @@ import HookCounterTwo from './hooks/HookCounterTwo ';
 import HookObject from './hooks/HookObject';
 import HookArray from './hooks/HookArray';
 import HookMouse from './hooks/HookMouse';
+import MouseContainer from './hooks/MouseContainer';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <HookMouse />
+        <MouseContainer />
       </div>
     );
   }
