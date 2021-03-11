@@ -36,13 +36,14 @@ import PostForm from './http-react/PostForm';
 import HookCounter from './hooks/HookCounter';
 import HookCounterTwo from './hooks/HookCounterTwo ';
 import HookObject from './hooks/HookObject';
+import HookArray from './hooks/HookArray';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <HookObject />
+        <HookArray />
       </div>
     );
   }
