@@ -34,13 +34,14 @@ import { UserProvider } from './components/context/UserContext';
 import PostList from './http-react/PostList';
 import PostForm from './http-react/PostForm';
 import HookCounter from './hooks/HookCounter';
+import HookCounterTwo from './hooks/HookCounterTwo ';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <HookCounter />
+        <HookCounterTwo />
       </div>
     );
   }
