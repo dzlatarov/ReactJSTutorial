@@ -29,8 +29,6 @@ import User from './components/renderProps/User';
 import ClickCounter from './components/renderProps/ClickCounter';
 import HoverCounter from './components/renderProps/HoverCounter';
 import Counter from './components/renderProps/Counter';
-import ComponentC from './components/context/ComponentC';
-import { UserProvider } from './components/context/UserContext';
 import PostList from './http-react/PostList';
 import PostForm from './http-react/PostForm';
 import HookCounter from './hooks/HookCounter';
@@ -40,13 +38,20 @@ import HookArray from './hooks/HookArray';
 import HookMouse from './hooks/HookMouse';
 import MouseContainer from './hooks/MouseContainer';
 import DataFetching from './hooks/DataFetching';
+import ComponentC from './hooks/ComponentC';
 
+export const UserContext = React.createContext()
+export const SkillContext = React.createContext()
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <DataFetching />
+        <UserContext.Provider value='Danail'>
+          <SkillContext.Provider value='React Developer'>
+            <ComponentC />
+          </SkillContext.Provider>
+        </UserContext.Provider>
       </div>
     );
   }
