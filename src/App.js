@@ -39,13 +39,14 @@ import HookObject from './hooks/HookObject';
 import HookArray from './hooks/HookArray';
 import HookMouse from './hooks/HookMouse';
 import MouseContainer from './hooks/MouseContainer';
+import DataFetching from './hooks/DataFetching';
 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <MouseContainer />
+        <DataFetching />
       </div>
     );
   }
