@@ -40,6 +40,7 @@ import MouseContainer from './hooks/MouseContainer';
 import DataFetching from './hooks/DataFetching';
 import ComponentC from './hooks/ComponentC';
 import UseReducerCounter from './hooks/UseReducerCounter';
+import UseReducerCounterComplex from './hooks/UseReducerCounterComplex';
 
 export const UserContext = React.createContext()
 export const SkillContext = React.createContext()
@@ -48,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UseReducerCounter />
+        <UseReducerCounterComplex />
       </div>
     );
   }
