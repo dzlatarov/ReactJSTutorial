@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useReducer } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import Greet from './components/Greet'
@@ -38,22 +38,41 @@ import HookArray from './hooks/HookArray';
 import HookMouse from './hooks/HookMouse';
 import MouseContainer from './hooks/MouseContainer';
 import DataFetching from './hooks/DataFetching';
-import ComponentC from './hooks/ComponentC';
 import UseReducerCounter from './hooks/UseReducerCounter';
 import UseReducerCounterComplex from './hooks/UseReducerCounterComplex';
 import UseReducerMultipleCounter from './hooks/UseReducerMultipleCounter';
+import ComponentA from './hooks/useReducerWithUseContext/ComponentA';
+import ComponentB from './hooks/useReducerWithUseContext/ComponentB';
+import ComponentC from './hooks/useReducerWithUseContext/ComponentC';
 
-export const UserContext = React.createContext()
-export const SkillContext = React.createContext()
+export const CountContext = React.createContext()
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <UseReducerMultipleCounter />
-      </div>
-    );
+const initialState = 0
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1
+    case 'decrement':
+      return state - 1
+    case 'reset':
+      return initialState
+    default:
+      return state
   }
+}
+
+function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
+  return (
+    <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+      <div className="App">
+        Count - {count}
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+      </div >
+    </CountContext.Provider>
+  )
 }
 
 export default App;
