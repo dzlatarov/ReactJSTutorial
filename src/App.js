@@ -41,6 +41,7 @@ import DataFetching from './hooks/DataFetching';
 import ComponentC from './hooks/ComponentC';
 import UseReducerCounter from './hooks/UseReducerCounter';
 import UseReducerCounterComplex from './hooks/UseReducerCounterComplex';
+import UseReducerMultipleCounter from './hooks/UseReducerMultipleCounter';
 
 export const UserContext = React.createContext()
 export const SkillContext = React.createContext()
@@ -49,7 +50,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <UseReducerCounterComplex />
+        <UseReducerMultipleCounter />
       </div>
     );
   }
