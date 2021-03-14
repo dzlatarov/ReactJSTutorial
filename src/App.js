@@ -50,6 +50,7 @@ import DocTitleOne from './hooks/customHook/DocTitleOne';
 import DocTitleTwo from './hooks/customHook/DocTitleTwo';
 import CounterOne from './hooks/customHook/CounterOne';
 import CounterTwo from './hooks/customHook/CounterTwo';
+import UserForm from './hooks/customHook/UserForm';
 
 export const CountContext = React.createContext()
 
@@ -70,8 +71,7 @@ export const CountContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <CounterOne />
-      <CounterTwo />
+      <UserForm />
     </div >
   )
 }
