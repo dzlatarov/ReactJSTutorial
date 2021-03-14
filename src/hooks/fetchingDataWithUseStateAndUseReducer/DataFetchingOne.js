@@ -18,12 +18,12 @@ function DataFetchingOne() {
                 setPost({})
                 setError('Something went wrong!')
             })
-    })
+    }, [])
 
     return (
         <div>
             {loading ? 'Loading' : post.title}
-            {error ? error : null}            
+            {error ? error : null}
         </div>
     )
 }

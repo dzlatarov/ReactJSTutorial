@@ -38,7 +38,7 @@ function DataFetchingTwo() {
             .catch(err => {
                 dispatch({ type: 'FETCH_ERROR' })
             })
-    })
+    }, [])
 
     return (
         <div>
