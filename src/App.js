@@ -44,34 +44,29 @@ import UseReducerMultipleCounter from './hooks/UseReducerMultipleCounter';
 import ComponentA from './hooks/useReducerWithUseContext/ComponentA';
 import ComponentB from './hooks/useReducerWithUseContext/ComponentB';
 import ComponentC from './hooks/useReducerWithUseContext/ComponentC';
+import DataFetchingOne from './hooks/fetchingDataWithUseStateAndUseReducer/DataFetchingOne';
 
 export const CountContext = React.createContext()
 
-const initialState = 0
-const reducer = (state, action) => {
-  switch (action) {
-    case 'increment':
-      return state + 1
-    case 'decrement':
-      return state - 1
-    case 'reset':
-      return initialState
-    default:
-      return state
-  }
-}
+// const initialState = 0
+// const reducer = (state, action) => {
+//   switch (action) {
+//     case 'increment':
+//       return state + 1
+//     case 'decrement':
+//       return state - 1
+//     case 'reset':
+//       return initialState
+//     default:
+//       return state
+//   }
+// }
 
 function App() {
-  const [count, dispatch] = useReducer(reducer, initialState)
   return (
-    <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
-      <div className="App">
-        Count - {count}
-        <ComponentA />
-        <ComponentB />
-        <ComponentC />
-      </div >
-    </CountContext.Provider>
+    <div className="App">
+      <DataFetchingOne />
+    </div >
   )
 }
 
