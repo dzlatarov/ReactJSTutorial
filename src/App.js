@@ -18,7 +18,6 @@ import Form from './components/formHandling/Form';
 import LifecycleA from './components/lifecycleMethods/LifecycleA';
 import Table from './components/fragments/Table';
 import RefsDemo from './components/refs/RefsDemo';
-import FocusInput from './components/refs/FocusInput';
 import FRParentInput from './components/forwarding Refs/FRParentInput';
 import PortalDemo from './components/portals/PortalDemo';
 import Hero from './components/errorBoundary/Hero';
@@ -45,6 +44,8 @@ import DataFetchingOne from './hooks/fetchingDataWithUseStateAndUseReducer/DataF
 import DataFetchingTwo from './hooks/fetchingDataWithUseStateAndUseReducer/DataFetchingTwo';
 import ParentComponent from './hooks/useCallbackHook/ParentComponent';
 import Counter from './hooks/useMemoHook/Counter';
+import FocusInput from './hooks/useRefHook/FocusInput';
+import HookTimer from './hooks/useRefHook/HookTimer';
 
 export const CountContext = React.createContext()
 
@@ -65,7 +66,8 @@ export const CountContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <FocusInput />
+      <HookTimer />
     </div >
   )
 }
