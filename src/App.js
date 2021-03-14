@@ -45,6 +45,7 @@ import ComponentA from './hooks/useReducerWithUseContext/ComponentA';
 import ComponentB from './hooks/useReducerWithUseContext/ComponentB';
 import ComponentC from './hooks/useReducerWithUseContext/ComponentC';
 import DataFetchingOne from './hooks/fetchingDataWithUseStateAndUseReducer/DataFetchingOne';
+import DataFetchingTwo from './hooks/fetchingDataWithUseStateAndUseReducer/DataFetchingTwo';
 
 export const CountContext = React.createContext()
 
@@ -65,7 +66,7 @@ export const CountContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <DataFetchingOne />
+      <DataFetchingTwo />
     </div >
   )
 }
