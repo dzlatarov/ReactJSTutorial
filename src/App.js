@@ -26,7 +26,6 @@ import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 import User from './components/renderProps/User';
 import ClickCounter from './components/renderProps/ClickCounter';
 import HoverCounter from './components/renderProps/HoverCounter';
-import Counter from './components/renderProps/Counter';
 import PostList from './http-react/PostList';
 import PostForm from './http-react/PostForm';
 import HookCounter from './hooks/HookCounter';
@@ -45,6 +44,7 @@ import ComponentC from './hooks/useReducerWithUseContext/ComponentC';
 import DataFetchingOne from './hooks/fetchingDataWithUseStateAndUseReducer/DataFetchingOne';
 import DataFetchingTwo from './hooks/fetchingDataWithUseStateAndUseReducer/DataFetchingTwo';
 import ParentComponent from './hooks/useCallbackHook/ParentComponent';
+import Counter from './hooks/useMemoHook/Counter';
 
 export const CountContext = React.createContext()
 
@@ -65,7 +65,7 @@ export const CountContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <ParentComponent />
+      <Counter />
     </div >
   )
 }
